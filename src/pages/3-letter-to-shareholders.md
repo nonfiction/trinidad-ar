@@ -2,6 +2,8 @@
 id: letter-to-shareholders
 ---
 
+<aside id="our-strategy">{{{page.our_strategy.content}}}</aside>
+
 ## Letter To Shareholders
 
 ### Following our plan
@@ -30,9 +32,6 @@ Not only do we have exciting international opportunities, we also have growth po
 
 As we move in to 2014, we have a large number of opportunities to choose from and the financial flexibility to fund our growth. Our existing business generates strong free cash flow and our conservative balance sheet provides us with a solid base to grow from. We expect industry conditions in 2014 to be similar or slightly better than 2013, with potential growth in Canada driven largely by LNG development and in the US by an ongoing move to high performance equipment. Activity levels and dayrates in the US have begun to improve in the first few months of 2014. If these conditions continue to improve, it would have positive implications for our 2014 results. In addition to these industry improvements, we are ready for the next step in our development – global growth. We expect to see a growing contribution from our international joint venture as we add more rigs and expand our operations outside of North America.
         
-
 <div class="signature">Lyle Whitmarsh <span class="position">Chief Executive Officer</span></div>
-
 <div class="signature">Brent Conway <span class="position">President</span></div>
-
-March 5, 2014
+<div class="date">March 5, 2014</div>
