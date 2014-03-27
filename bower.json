@@ -1,0 +1,9 @@
+{
+  "name": "trinidad-ar",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "lesshat": "~2.0.15",
+    "jquery": "1.11.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trinidad-ar",
+  "devDependencies": {
+    "js-yaml": "^3.0.2",
+    "mustache": "^0.8.1",
+    "marked": "^0.3.2",
+    "underscore": "^1.6.0",
+    "less": "^1.7.0",
+    "jshint": "^2.4.4"
+  }
+}
