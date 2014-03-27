@@ -21,13 +21,16 @@ var template = fs.readFileSync(args[0], 'utf8').toString()
 ;
 
 site.pages = [];
+site.page = {};
 
 _.each(page_files, function(f){
   var page_data = util.page_meta(f);
   page_data.content = util.page_content(f);
-  site.pages[page_data.id] = page_data;
+  site.page[page_data.id] = page_data;
   site.pages.push(page_data);
 });
+
+fs.writeFileSync('build/site.json', JSON.stringify(site), 'utf8');
 
 // Two pass rendering allows mustaches in page content
 console.log(mustache.render(mustache.render(template, site), site));

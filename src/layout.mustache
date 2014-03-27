@@ -2,14 +2,17 @@
 <html>
 <head>
   <title>{{title}}</title>
+  <meta charset=utf-8>
+  <meta name=description content="{{title}}">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheets/site.css">
 </head>
 <body>
-{{#pages}}
+{{#pages}}{{^hidden}}
   <section class="page" id="{{id}}">
     {{{content}}}
   </section>
-{{/pages}}
+{{/hidden}}{{/pages}}
 <script src="javascripts/lib.min.js"></script>
 <script src="javascripts/main.min.js"></script>
 </body>
