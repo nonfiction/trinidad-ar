@@ -1,6 +1,6 @@
 ---
 id: operations_us
-hidden: true
+partial: true
 ---
 
 ### US

@@ -1,6 +1,6 @@
 ---
 id: our_strategy
-hidden: true
+partial: true
 ---
 
 ## Our Strategy

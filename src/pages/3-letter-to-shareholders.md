@@ -2,7 +2,7 @@
 id: letter-to-shareholders
 ---
 
-<aside id="our-strategy">{{{page.our_strategy.content}}}</aside>
+<aside id="our-strategy">{{> our_strategy }}</aside>
 
 ## Letter To Shareholders
 

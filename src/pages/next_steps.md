@@ -1,6 +1,6 @@
 ---
 id: next_steps
-hidden: true
+partial: true
 ---
 
 ### Next Steps:

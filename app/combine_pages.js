@@ -3,7 +3,6 @@
 var yaml = require('js-yaml')
 ,   fs   = require('fs')
 ,   mustache = require('mustache')
-,   marked = require('marked')
 ,   _ = require('underscore')
 ,   util = require('./util')
 ,   usage = "Usage: layout.mustache site.yml [page.md, ...]"
@@ -22,21 +21,21 @@ var template = fs.readFileSync(args[0], 'utf8').toString()
 
 site.pages = [];
 site.page = {};
+site.partials = {};
 
 _.each(page_files, function(f){
   var page_data = util.page_meta(f);
   page_data.content = util.page_content(f);
-  site.page[page_data.id] = page_data;
-  site.pages.push(page_data);
+  if (page_data.partial) {
+    site.partials[page_data.id] = page_data.content;
+  } else {
+    site.page[page_data.id] = page_data;
+    site.pages.push(page_data);
+  }
 });
 
 fs.writeFileSync('build/site.json', JSON.stringify(site), 'utf8');
 
 // Multi-pass rendering allows mustaches in page content and partials
-content = template;
-
-for (var i = 0; i < 3; i++) {
-  content = mustache.render(content, site);
-};
-
-console.log(content);
+var content = mustache.render(template, site, site.partials);
+console.log(mustache.render(content, site, site.partials));

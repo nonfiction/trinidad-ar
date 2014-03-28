@@ -1,6 +1,6 @@
 ---
 id: step_2
-hidden: true
+partial: true
 ---
 
 ### Step 2:

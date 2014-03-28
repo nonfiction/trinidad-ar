@@ -3,17 +3,17 @@ id: operations
 ---
 
 <div class="ops-intro" id="operations_intro">
-    {{{page.operations_intro.content}}}
+    {{> operations_intro}}
 </div>
 
 <div class="ops-area-row">
-    {{#page.operations_canada}}
-        <div id="{{id}}" class="ops-col col-{{id}}">{{{content}}}</div>
-    {{/page.operations_canada}}
-    {{#page.operations_us}}
-        <div id="{{id}}" class="ops-col col-{{id}}">{{{content}}}</div>
-    {{/page.operations_us}}
-    {{#page.operations_international}}
-        <div id="{{id}}" class="ops-col col-{{id}}">{{{content}}}</div>
-    {{/page.operations_international}}
+    <div id="operations-canada" class="ops-col">
+        {{> operations_canada}}
+    </div>
+    <div id="operations-us" class="ops-col">
+        {{> operations_us}}
+    </div>
+    <div id="operations-international" class="ops-col">
+        {{> operations_international}}
+    </div>
 </div>

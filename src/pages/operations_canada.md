@@ -1,6 +1,6 @@
 ---
 id: operations_canada
-hidden: true
+partial: true
 ---
 
 ### Canada

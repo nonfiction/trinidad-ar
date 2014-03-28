@@ -1,6 +1,6 @@
 ---
 id: operations_international
-hidden: true
+partial: true
 ---
 
 ### International

@@ -1,6 +1,6 @@
 ---
 id: step_1
-hidden: true
+partial: true
 ---
 
 ## The Steps

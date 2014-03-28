@@ -1,6 +1,6 @@
 ---
 id: operations_intro
-hidden: true
+partial: true
 ---
 
 ## Operations

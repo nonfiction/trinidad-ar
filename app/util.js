@@ -44,7 +44,8 @@ module.exports.page_meta = function(f) {
 module.exports.page_content = function(f) {
   var content = loadPage(f).content;
   if (content) {
-    return marked(content);
+    // markdown the content and fix for mustache partials
+    return marked(content).replace(/{{&gt;/g, '{{>');
   } else {
     return '';
   }
