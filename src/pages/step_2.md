@@ -3,9 +3,9 @@ id: step_2
 partial: true
 ---
 
-### Step 2:
+## Step 2:
 
-#### Skilled Experienced People
+### Skilled Experienced People
 
 <div class="notes">
     <div class="note">2,855 <small>employees</small></div>

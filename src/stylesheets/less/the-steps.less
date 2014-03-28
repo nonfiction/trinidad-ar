@@ -1,28 +1,28 @@
 [id='/page/the-steps'] {
-  h2#the-steps { display: none; }
-  h3 {
-    font-family: @font-family-sans-serif;
-    font-size: 1.35em;
-    font-weight: 100;
-    text-transform: uppercase;
+
+  &.page {
+    padding: 0;
   }
-  h4 {
-    font-size: 3.8em;
+
+  h2#the-steps {
+    display: none;
   }
+
   .block {
     clear: both;
     overflow: hidden;
   }
   .block-image {
-    min-height: 300px;
-    width: 30%;
+    height: 440px;
+    width: 35%;
     float: left;
     clear: left;
     background-color: #eee;
-    border: 1px solid #ddd;
+    background-position: center center;
+    background-size: cover;
   }
   .block-text {
-    width: 70%;
+    width: 65%;
     float: right;
     padding-left: 30px;
   }
@@ -47,17 +47,76 @@
     }
   }
 
-  .step-1 {
-    h4, .note {
-      color: @lime-green;
-    }
-  }
-  .step-2 {
-    h4, .note {
-      color: @cool-blue;
+  .step-color(@color, @secondary:@trinidad-green) {
+    h3, .note {
+      color: @color;
       small {
-        color: @trinidad-green;
+        color: @secondary;
       }
     }
+  }
+  .step-1 { .step-color(@lime-green); }
+  .step-2 { .step-color(@cool-blue); }
+  .step-3 { .step-color(@mute-green); }
+  .next-steps { .step-color(@trinidad-green); }
+
+  .block {
+    position: relative;
+    z-index: 1;
+    &:after {
+      display: block;
+      content: ' ';
+      background-color: #666;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      z-index: 5;
+      .background-image(linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%));
+      background-color: transparent;
+    }
+    &.step-1 {
+      .block-image {
+        background-image: url(~"@{staticpath}/images/step-1.jpg");
+      }
+    }
+    &.step-2 {
+      .block-image {
+        background-image: url(~"@{staticpath}/images/step-2.jpg");
+      }
+    }
+    &.step-1, &.step-2 {
+      padding: 0 @page-side-padding;
+    }
+    &.step-3 {
+      padding: 30px @page-side-padding;
+      padding-left: @page-side-padding + 60px;
+    }
+    @next-steps-sidebar-width: 300px;
+    &.next-steps {
+      padding: 60px @page-side-padding;
+      padding-left: @page-side-padding + @next-steps-sidebar-width;
+      background-color: #A9CBE0;
+
+      .sidebar-steps-to-success {
+        text-align: right;
+        width: @next-steps-sidebar-width;
+        padding-right: 40px;
+        position: absolute;
+        margin-left: 0 - @next-steps-sidebar-width;
+        color: white;
+        h4 {
+          text-transform: none;
+          color: white;
+        }
+        ul {
+          list-style: none;
+          font-weight: bold;
+          line-height: 2.4em;
+        }
+      }
+    }
+
   }
 }

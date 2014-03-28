@@ -5,9 +5,9 @@ partial: true
 
 ## The Steps
 
-### Step 1:
+## Step 1:
 
-#### High Performing Rigs
+### High Performing Rigs
 
 <div class="note">131 land rigs <sup>(1)</sup></div>
 <div class="note">80% top tier fleet</div>

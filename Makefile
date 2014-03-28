@@ -25,7 +25,7 @@ clean:
 	rm -rf build/*
 
 watch:
-	fswatch src:app 'clear; make'
+	fswatch src:app 'clear; make;'
 
 serve:
 	@ cd build && ../app/static_server.js
