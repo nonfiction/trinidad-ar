@@ -8,12 +8,12 @@ links:
 
 navigation:
   - title: The Steps
-    url: "#the-steps"
+    url: "#page-the-steps"
   - title: Letter to Shareholders
-    url: "#letter-to-shareholders"
+    url: "#page-letter-to-shareholders"
   - title: Operations
-    url: "#operations"
+    url: "#page-operations"
   - title: "MD&A And Financials"
-    url: "#md-a"
+    url: "#page-md-a"
   - title: Contact Us
-    url: "#contact-us"
+    url: "#page-contact-us"

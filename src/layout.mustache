@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/site.css">
 </head>
 <body>
-
+<div class="masthead"></div>
 <nav role="main">
   <ul>
     {{#navigation}}
@@ -18,8 +18,10 @@
 </nav>
 
 {{#pages}}{{^hidden}}
-  <section class="page" id="{{id}}">
-    {{{content}}}
+  <section class="page" id="page-{{id}}">
+    <div class="page-wrap">
+      {{{content}}}
+    </div>
   </section>
 {{/hidden}}{{/pages}}
 <script src="javascripts/lib.min.js"></script>

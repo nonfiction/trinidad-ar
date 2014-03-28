@@ -1,5 +1,8 @@
 @import "lesshat/build/lesshat";
+
 @import "bootstrap/less/variables";
+@import "./less/variables";
+
 @import "bootstrap/less/mixins";
 @import "bootstrap/less/normalize";
 @import "bootstrap/less/print";
@@ -9,8 +12,24 @@
 @import "bootstrap/less/wells";
 @import "bootstrap/less/utilities";
 @import "bootstrap/less/responsive-utilities";
-@import "./less/variables";
 
-body {
-  font-family: DroidSans, sans-serif;
+@import "./less/nav";
+@import "./less/home";
+@import "./less/the-steps";
+@import "./less/letter-to-shareholders";
+@import "./less/operations";
+@import "./less/md-a";
+@import "./less/contact-us";
+
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background-color: @trinidad-green;
+}
+
+.page {
+  padding: 30px 120px;
 }
