@@ -1,5 +1,5 @@
 ---
-id: the-steps
+id: '/page/the-steps'
 ---
 
 <div class="block step-1">

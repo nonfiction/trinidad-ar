@@ -1,5 +1,5 @@
 ---
-id: home
+id: '/page/home'
 ---
 
 # Trinidad Drilling

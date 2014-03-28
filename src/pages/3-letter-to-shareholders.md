@@ -1,5 +1,5 @@
 ---
-id: letter-to-shareholders
+id: '/page/letter-to-shareholders'
 ---
 
 <aside id="our-strategy" class="col-sm-4">{{> our_strategy }}</aside>

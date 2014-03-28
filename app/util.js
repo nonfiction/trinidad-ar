@@ -5,7 +5,7 @@ var fs = require('fs')
 ;
 
 var slug = module.exports.slug = function(f) {
-  return f.split('.').slice(0, -1).join('_').split('/').slice(2).join('_').replace(/-/g, '_');
+  return f.split('.').slice(0, -1).join('_').split('/').slice(2).join('/').replace(/-/g, '_');
 }
 
 var pages = {};

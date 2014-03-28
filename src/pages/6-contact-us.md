@@ -1,5 +1,5 @@
 ---
-id: contact-us
+id: '/page/contact-us'
 ---
 
 ## Contact Us

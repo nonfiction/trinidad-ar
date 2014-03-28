@@ -1,5 +1,5 @@
 ---
-id: md-a
+id: '/page/md-a'
 ---
 
 ## MD & A

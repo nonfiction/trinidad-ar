@@ -1,5 +1,5 @@
 ---
-id: operations
+id: '/page/operations'
 ---
 
 <div class="ops-intro" id="operations_intro">

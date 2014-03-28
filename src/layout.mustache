@@ -12,13 +12,13 @@
 <nav role="main">
   <ul>
     {{#navigation}}
-      <li><a href="{{url}}">{{title}}</a></li>
+      <li><a href="{{{url}}}">{{title}}</a></li>
     {{/navigation}}
   </ul>
 </nav>
 
 {{#pages}}{{^hidden}}
-  <section class="page" id="page-{{id}}">
+  <section class="page" id="{{{id}}}">
     <div class="page-wrap">
       {{{content}}}
     </div>
