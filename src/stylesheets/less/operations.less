@@ -1,3 +1,22 @@
 #page-operations {
-
+  .col-headings(@color) {
+    li {
+      .make-heading(1.5em, @color);
+    }
+    h4 {
+      .make-heading(2.2em, @color);
+      text-transform: none;
+    }
+  }
+  .ops-area-row {
+    overflow: hidden; // clearfix
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+  }
+  #operations-canada { .col-headings(@lime-green); }
+  #operations-us { .col-headings(@cool-blue); }
+  #operations-international { .col-headings(@trinidad-green); }
 }

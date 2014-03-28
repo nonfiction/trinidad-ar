@@ -7,13 +7,13 @@ id: operations
 </div>
 
 <div class="ops-area-row">
-    <div id="operations-canada" class="ops-col">
+    <div id="operations-canada" class="col-sm-4">
         {{> operations_canada}}
     </div>
-    <div id="operations-us" class="ops-col">
+    <div id="operations-us" class="col-sm-4">
         {{> operations_us}}
     </div>
-    <div id="operations-international" class="ops-col">
+    <div id="operations-international" class="col-sm-4">
         {{> operations_international}}
     </div>
 </div>

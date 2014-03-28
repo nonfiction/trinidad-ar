@@ -2,6 +2,7 @@
 
 @import "bootstrap/less/variables";
 @import "./less/variables";
+@import "./less/mixins";
 
 @import "bootstrap/less/mixins";
 @import "bootstrap/less/normalize";
@@ -32,4 +33,31 @@
 
 .page {
   padding: 30px 120px;
+}
+
+h2 {
+  font-family: @font-family-sans-serif;
+  font-size: 1.35em;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h3 { font-size: 3.8em; }
+
+h4 {
+  font-family: @font-family-sans-serif;
+  font-size: 1.4em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+
+blockquote {
+  border: 1px solid @slate-gray;
+  border-width: 1px 0;
+  font-size: 1.65em;
+  font-family: @headings-font-family;
+  color: @trinidad-green;
+  text-align: center;
+  p {}
 }
