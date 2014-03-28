@@ -71,4 +71,4 @@ build/javascripts/lib.min.js: $(bowerlibs)
 
 stylesheets:$(less:src/stylesheets/%.less=build/stylesheets/%.css)
 javascripts:build/javascripts/lib.min.js build/javascripts/main.min.js jshint
-images: $(patsubst src/images/%,build/images/%,$(img_sources))
+images: $(patsubst src/images/%,build/images/%,$(img_sources)) build/favicon.ico
