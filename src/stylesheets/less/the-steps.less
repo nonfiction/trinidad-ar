@@ -104,16 +104,33 @@
     }
     &.step-1, &.step-2 {
       padding: 0 @page-side-padding;
+      .block-text {
+        margin-top: 30px;
+      }
     }
     &.step-3 {
       padding: 30px @page-side-padding;
       padding-left: @page-side-padding + 60px;
     }
-    @next-steps-sidebar-width: 300px;
+
+    @next-steps-sidebar-width: 400px;
+
     &.next-steps {
       padding: 60px @page-side-padding;
       padding-left: @page-side-padding + @next-steps-sidebar-width;
       background-color: #A9CBE0;
+
+      .block-inner > h4 {
+        font-size: 2.8em;
+        font-weight: 900;
+        text-transform: none;
+      }
+
+      p.hidden {
+        display: none;
+      }
+
+      #summary { display: none; }
 
       .sidebar-steps-to-success {
         text-align: right;
