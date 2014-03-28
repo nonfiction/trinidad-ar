@@ -5,3 +5,19 @@
   color: @color;
   font-weight: 900;
 }
+
+.row-shadow(){
+  &:after {
+    display: block;
+    content: ' ';
+    background-color: #666;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    z-index: 5;
+    .background-image(linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%));
+    background-color: transparent;
+  }
+}
