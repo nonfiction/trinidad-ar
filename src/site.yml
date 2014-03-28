@@ -1,6 +1,19 @@
 title: Trinidad Annual Report 2013
+
 links:
   operations: http://www.trinidaddrilling.com
   ar_pdf: http://www.trinidaddrilling.com
   mda_pdf: http://www.trinidaddrilling.com
   contact: trinidad@trinidaddrilling.com
+
+navigation:
+  - title: The Steps
+    url: "#the-steps"
+  - title: Letter to Shareholders
+    url: "#letter-to-shareholders"
+  - title: Operations
+    url: "#operations"
+  - title: "MD&A And Financials"
+    url: "#md-a"
+  - title: Contact Us
+    url: "#contact-us"
