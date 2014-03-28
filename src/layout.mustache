@@ -8,22 +8,23 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/site.css">
 </head>
 <body>
-<div class="masthead"></div>
-<nav role="main">
-  <ul>
-    {{#navigation}}
-      <li><a href="{{{url}}}">{{title}}</a></li>
-    {{/navigation}}
-  </ul>
-</nav>
+<div class="site-wrapper">
+  <nav role="main">
+    <ul>
+      {{#navigation}}
+        <li><a href="{{{url}}}">{{title}}</a></li>
+      {{/navigation}}
+    </ul>
+  </nav>
 
-{{#pages}}{{^hidden}}
-  <section class="page" id="{{{id}}}">
-    <div class="page-wrap">
-      {{{content}}}
-    </div>
-  </section>
-{{/hidden}}{{/pages}}
+  {{#pages}}{{^hidden}}
+    <section class="page" id="{{{id}}}">
+      <div class="page-wrap">
+        {{{content}}}
+      </div>
+    </section>
+  {{/hidden}}{{/pages}}
+</div>
 <script src="javascripts/lib.min.js"></script>
 <script src="javascripts/main.min.js"></script>
 </body>
