@@ -1,13 +1,12 @@
 # Command Aliases & Flags
-######################################################################
+########################################
 
-MUSTACHE=bundle exec mustache
 LESSC=./node_modules/.bin/lessc
 LESSFLAGS=--compress --include-path=./bower_components
 UGLIFYFLAGS=
 
 # File lists
-######################################################################
+########################################
 
 src_md=$(shell find src/pages -name '*.md')
 jslibs=$(shell find src/javascripts/*/ -name '*.js')
@@ -16,7 +15,7 @@ less=$(wildcard src/stylesheets/*.less)
 bowerlibs=bower_components/jquery/dist/jquery.js
 
 # General Rules
-######################################################################
+########################################
 
 default: site
 
@@ -32,7 +31,7 @@ jshint: $(js)
 	./node_modules/.bin/jshint $^
 
 # Wildcard Rules
-######################################################################
+########################################
 
 build/stylesheets/%.css: src/stylesheets/%.less
 	@ mkdir -p `dirname $@`
@@ -47,14 +46,14 @@ build/index.html: src/layout.mustache src/site.yml $(src_md)
 	./app/combine_pages.js $^ > $@
 
 # Single File Rules
-######################################################################
+########################################
 
 build/javascripts/lib.min.js: $(bowerlibs)
 	@ mkdir -p `dirname $@`
 	uglifyjs $(UGLIFYFLAGS) $^ > $@
 
 # Generated Targets
-######################################################################
+########################################
 
 stylesheets:$(less:src/stylesheets/%.less=build/stylesheets/%.css)
 javascripts:build/javascripts/lib.min.js build/javascripts/main.min.js jshint
