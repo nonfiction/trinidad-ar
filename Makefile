@@ -24,6 +24,12 @@ clean:
 	rm -rf build/*
 	rm -rf .tmp
 
+watch:
+	fswatch src:app 'clear; make'
+
+serve:
+	cd build && python -m SimpleHTTPServer
+
 site: build/index.html assets
 
 assets: javascripts stylesheets

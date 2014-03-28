@@ -4,10 +4,10 @@
     npm install
     bower install
 
-## Build
-    
-    make
-    open build/index.html
+## Run it locally
+
+    make watch     # rebuild on file changes
+    make serve     # in a new shell
 
 ## Deploy on octohost
 
