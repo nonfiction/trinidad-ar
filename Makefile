@@ -28,7 +28,7 @@ watch:
 	fswatch src:app 'clear; make'
 
 serve:
-	cd build && python -m SimpleHTTPServer
+	@ cd build && ../app/static_server.js
 
 site: build/index.html assets
 
