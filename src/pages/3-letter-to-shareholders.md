@@ -8,7 +8,7 @@ id: letter-to-shareholders
 
 ### Following our plan
 
->> This past year has been pivotal year in Trinidad’s strategic development; we achieved several important milestones in our long-term plan and our operations continued to perform strongly.
+> This past year has been pivotal year in Trinidad’s strategic development; we achieved several important milestones in our long-term plan and our operations continued to perform strongly.
 
 In 2013, our operations generated adjusted EBITDA that was in line with 2012, recording higher dayrates and margins despite weaker industry activity levels. In addition, our net earnings increased to $71 million or $0.58 per share in 2013, up 29% or $0.12 per share compared to 2012. 
 

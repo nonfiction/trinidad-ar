@@ -32,5 +32,11 @@ _.each(page_files, function(f){
 
 fs.writeFileSync('build/site.json', JSON.stringify(site), 'utf8');
 
-// Two pass rendering allows mustaches in page content
-console.log(mustache.render(mustache.render(template, site), site));
+// Multi-pass rendering allows mustaches in page content and partials
+content = template;
+
+for (var i = 0; i < 3; i++) {
+  content = mustache.render(content, site);
+};
+
+console.log(content);
