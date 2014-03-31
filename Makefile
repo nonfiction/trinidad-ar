@@ -13,7 +13,7 @@ src_md=$(shell find src/pages -name '*.md')
 js=$(wildcard src/javascripts/*.js)
 less=$(wildcard src/stylesheets/*.less)
 lesslibs=$(shell find src/stylesheets/less -name '*.less')
-img_sources=$(shell find src/images -type f)
+img_sources=$(shell find src/images -type f \! -name '.*')
 bowerlibs=bower_components/jquery/dist/jquery.js
 
 # General Rules
