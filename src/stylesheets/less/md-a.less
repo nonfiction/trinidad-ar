@@ -1,4 +1,12 @@
-[id='/page/md-a'] {
-  .row-shadow();
+[id='/page/md-a'].page {
   background-color: #E0F1ED;
+  padding: 30px @page-side-padding;
+  width: 100%;
+  .row-shadow();
+  .page-wrap {
+    .row-wrap();
+    &:after {
+      display: block;
+    }
+  }
 }

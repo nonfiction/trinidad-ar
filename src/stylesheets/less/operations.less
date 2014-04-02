@@ -1,4 +1,12 @@
 [id='/page/operations'] {
+  .ops-intro, .ops-areas {
+    padding: 0 @page-side-padding;
+  }
+  .ops-intro {
+    padding-top: 60px;
+    padding-bottom: 200px;
+    .background-cover(~"@{staticpath}/images/operations-intro.jpg", #edf0ff);
+  }
   .col-headings(@color) {
     li {
       .make-heading(1.5em, @color);
@@ -8,7 +16,7 @@
       text-transform: none;
     }
   }
-  .ops-area-row {
+  .ops-areas {
     overflow: hidden; // clearfix
     ul {
       list-style: none;

@@ -15,8 +15,16 @@
     left: 0;
     right: 0;
     height: 20px;
+    width: 100%;
     z-index: 5;
     .background-image(linear-gradient(to bottom, rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%));
     background-color: transparent;
   }
+}
+
+.background-cover(@image, @color) {
+  background-color: @color;
+  background-image: url(@image);
+  background-position: center center;
+  background-size: cover;
 }

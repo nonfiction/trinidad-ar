@@ -1,8 +1,4 @@
-[id='/page/the-steps'] {
-
-  &.page {
-    padding: 0;
-  }
+.page[id='/page/the-steps'] {
 
   h2#the-steps {
     display: none;
@@ -74,9 +70,7 @@
   .step-2 { .step-color(@cool-blue); }
   .step-3 { .step-color(@mute-green); }
   .next-steps {
-    background-image: url(~"@{staticpath}/images/next-steps.jpg");
-    background-position: center center;
-    background-size: cover;
+    .background-cover(~"@{staticpath}/images/next-steps.jpg", #edf0ff);
     .step-color(@trinidad-green);
   }
 

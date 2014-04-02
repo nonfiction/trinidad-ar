@@ -1,23 +1,25 @@
 [id='/page/home'] {
-  background-color: #B0CDE7;
-  background-image: url(~"@{staticpath}/images/home.jpg");
-  background-position: center center;
-  background-size: cover;
-
+  .background-cover(~"@{staticpath}/images/home.jpg", #B0CDE7);
+  background-position: 10% 50%;
   .page-wrap {
-    padding: 200px 0;
-    width: 50%;
-    text-align: center;
+    padding: 200px @page-side-padding;
 
-    &:after {
-      display: block;
+    .page-inner {
       margin: 0 auto;
-      content: "Scroll Down";
-      font-family: @font-family-base;
-      font-weight: normal;
-      color: white;
-      padding-top: 30px;
-      text-transform: uppercase;
+      max-width: 1140px;
+    }
+    .main {
+      text-align: center;
+      &:after {
+        display: block;
+        margin: 0 auto;
+        content: "Scroll Down";
+        font-family: @font-family-base;
+        font-weight: normal;
+        color: white;
+        padding-top: 30px;
+        text-transform: uppercase;
+      }
     }
   }
 

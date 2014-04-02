@@ -32,9 +32,18 @@
 }
 
 .page {
-  padding: 30px @page-side-padding;
   clear: both;
   position: relative;
+  min-height: 300px;
+}
+
+.page, .page-wrap {
+  .clearfix;
+}
+
+.row-wrap {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 h2 {

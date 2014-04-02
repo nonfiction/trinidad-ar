@@ -1,4 +1,12 @@
-[id='/page/contact-us'] {
+[id='/page/contact-us'].page {
   background-color: #EDEDEE;
+  padding: 30px @page-side-padding;
+  width: 100%;
   .row-shadow();
+  .page-wrap {
+    .row-wrap();
+    &:after {
+      display: block;
+    }
+  }
 }
