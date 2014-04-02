@@ -1,3 +1,4 @@
+// Site specific colors
 @trinidad-green: #007A69;
 @lime-green: #BAE369;
 @mute-green: #52BEB1;
@@ -6,6 +7,30 @@
 @slate-gray: #5F6062;
 @wash-gray: #808285;
 @white-gray: #BBBDC0;
+
+// Site specific fonts
+
+@headings-font-weight: 900;
+@medium-headings-font-weight: 800;
+@light-headings-font-weight: 600;
+@headings-font-family:    "proxima-nova", sans-serif;
+
+.strong-heading {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+}
+
+.medium-heading {
+  font-family: @headings-font-family;
+  font-weight: @medium-headings-font-weight;
+}
+
+.light-heading {
+  font-family: @headings-font-family;
+  font-weight: @light-headings-font-weight;
+}
+
+// Bootstrap overrides
 
 @font-family-sans-serif:  'Droid Sans', sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -28,8 +53,6 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    "proxima-nova", sans-serif;
-@headings-font-weight:    900;
 @headings-line-height:    1.1;
 @headings-color:          @slate-gray;
 
