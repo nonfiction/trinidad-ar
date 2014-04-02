@@ -13,22 +13,16 @@
     overflow: hidden;
   }
   .block-image {
-    height: 440px;
-    // width: 35%;
-    // float: left;
-    // clear: left;
+    height: 490px;
     background-color: #eee;
     background-position: center center;
     background-size: cover;
   }
-  .block-text {
-    // width: 65%;
-    // float: right;
-    // padding-left: 30px;
-  }
   .block-inner {
-    max-width: 1420px;
+    position: relative;
+    max-width: 1140px;
     margin: 0 auto;
+    overflow: hidden;
   }
   .notes {
     display: block;
@@ -52,20 +46,13 @@
   }
 
   .step-3 {
-    .block-inner {
-      width: 65%;
-      margin-left: 0;
-    }
-    .sidebar-notes {
-      position: absolute;
-      right: 0;
-      top: 100px;
+    .sidebar {
+      top: 3.5em;
       text-align: center;
-      width: 35%;
-      .note {
-        width: 100%;
-        float: none;
-      }
+    }
+    .note {
+      width: 100%;
+      float: none;
     }
   }
 
@@ -91,6 +78,7 @@
     position: relative;
     z-index: 1;
     .row-shadow();
+    padding: 0 @page-side-padding;
 
     &.step-1 {
       .block-image {
@@ -103,14 +91,13 @@
       }
     }
     &.step-1, &.step-2 {
-      padding: 0 @page-side-padding;
       .block-text {
         margin-top: 30px;
       }
     }
     &.step-3 {
-      padding: 30px @page-side-padding;
-      padding-left: @page-side-padding + 60px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     @next-steps-sidebar-width: 400px;
@@ -124,6 +111,20 @@
         font-size: 2.8em;
         font-weight: 900;
         text-transform: none;
+        &:before {
+          display: inline-block;
+          content: ' ';
+          background-color: @trinidad-green;
+          background-image: data-uri('../images/right-arrow.png');
+          background-position: 85% 50%;
+          vertical-align: middle;
+          margin-bottom: 6px;
+          width: 36px;
+          height: 36px;
+          margin-right: 8px;
+          border: 3px solid white;
+          border-radius: 50%;
+        }
       }
 
       p.hidden {
