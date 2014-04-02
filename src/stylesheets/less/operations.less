@@ -1,7 +1,9 @@
 [id='/page/operations'] {
   .ops-intro, .ops-areas {
     padding: 0 @page-side-padding;
+    position: relative;
   }
+
   .ops-intro {
     padding-top: 60px;
     padding-bottom: 200px;
@@ -17,7 +19,9 @@
     }
   }
   .ops-areas {
-    overflow: hidden; // clearfix
+    .row-shadow();
+    padding-top: 30px;
+    padding-bottom: 30px;
     ul {
       list-style: none;
       padding: 0;
