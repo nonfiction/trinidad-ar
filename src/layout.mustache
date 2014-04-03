@@ -12,22 +12,23 @@
 </head>
 <body>
 
-<div class="brand-bar"></div>
+<div class="site-wrapper">
+  <div class="brand-bar"></div>
 
-<nav role="main">
-  {{> navigation }}
-</nav>
+  <nav role="main">
+    {{> navigation }}
+  </nav>
 
-<div class="pages-wrapper">
-  {{#pages}}{{^hidden}}
-    <section class="page" id="{{{id}}}">
-      <div class="page-wrap">
-        {{{ content }}}
-      </div>
-    </section>
-  {{/hidden}}{{/pages}}
+  <div class="pages-wrapper">
+    {{#pages}}{{^hidden}}
+      <section class="page" id="{{{id}}}">
+        <div class="page-wrap">
+          {{{ content }}}
+        </div>
+      </section>
+    {{/hidden}}{{/pages}}
+  </div>
 </div>
-
 <script src="javascripts/lib.min.js"></script>
 <script src="javascripts/main.min.js"></script>
 </body>

@@ -19,3 +19,14 @@ $(function(){
     return false;
   });
 });
+
+// Window Scroll
+$(function(){
+  $(window).on('scroll', function(){
+    if ($(this).scrollTop() > 80) {
+      $('body').not('.scrolled').addClass('scrolled');
+    } else {
+      $('body.scrolled').removeClass('scrolled');
+    }
+  });
+});
