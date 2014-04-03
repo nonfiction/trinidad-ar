@@ -20,20 +20,3 @@ In the US, we have seen an ongoing switch away from mechanical style drilling eq
 #### International Joint Venture
 
 Perhaps our most exciting growth opportunity is our international expansion. Our joint venture with Halliburton Company (Halliburton) gives us an opportunity to add rigs to a broad range of countries in a timeframe we could never have managed alone. Halliburton currently operates more than 100 rigs in more than 20 countries and expects to run a significant number of these rigs through our joint venture in the coming years. So far we have added eight rigs to the joint venture in two countries - Mexico and Saudi Arabia; but this is just the first step in our future global growth.
-
-<aside class="sidebar-steps-to-success">
-    {{> steps_to_success }}
-</aside>
-
-#### Summary
-
-Our reputation for high performance and our international joint venture open doors for us to grow and expand into more countries.
-
-Trinidad's joint venture gives it the first right to add rigs to Halliburton's international integrated projects. Alignment with an experienced global service provider expands our opportunities and lowers our risk.
-
-Trinidad has strong relationships with the key LNG players; we are already drilling wells and building rigs for them. As this market develops further, Trinidad is perfectly positioned to grow with it.
-
-Lower leverage and a flexible balance sheet supports us as we grow. Our credit facilities are paid off and our long-term debt does not mature until 2019. 
-
-We assembled a fleet of rigs that meet our customers' needs and continue to build new rigs with industry-leading technology. Our equipment is more efficient for our customers and safer for 
-our crews.

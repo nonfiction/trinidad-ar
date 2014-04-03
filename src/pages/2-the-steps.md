@@ -21,4 +21,16 @@ id: '/page/the-steps'
     <div class="main col-md-8 col-md-push-4">
         {{> next_steps }}
     </div>
+    <div class="steps-to-success">
+        <h4>Steps To Success</h4>
+        {{#contents.steps_to_success.steps}}
+            <div class="row">
+                <div class="col-md-4 step-title">
+                    <span class="title">{{{title}}}</span>
+                    <span class="arrow"></span>
+                </div>
+                <div class="col-md-8 step-description">{{{description}}}</div>
+            </div>
+        {{/contents.steps_to_success.steps}}
+    </div>
 </div></div>

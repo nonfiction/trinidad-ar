@@ -22,6 +22,7 @@ var template = fs.readFileSync(args[0], 'utf8').toString()
 site.pages = [];
 site.page = {};
 site.partials = {};
+site.contents = {};
 
 _.each(page_files, function(f){
   var page_data = util.page_meta(f);
@@ -32,6 +33,7 @@ _.each(page_files, function(f){
     site.page[page_data.id] = page_data;
     site.pages.push(page_data);
   }
+  site.contents[page_data.id] = page_data;
 });
 
 fs.writeFileSync('build/site.json', JSON.stringify(site), 'utf8');
