@@ -3,7 +3,10 @@ id: '/page/letter-to-shareholders'
 ---
 
 <div class="row-wrap"><div class="row">
-    <aside id="our-strategy" class="col-sm-4">{{> our_strategy }}</aside>
-
-    <div class="col-sm-8">{{> letter_to_shareholders }}</div>
+    <div class="col-sm-8 col-sm-push-4">
+        {{> letter_to_shareholders }}
+    </div>
+    <aside id="our-strategy" class="col-sm-4 col-sm-pull-8">
+        {{> our_strategy }}
+    </aside>
 </div></div>
