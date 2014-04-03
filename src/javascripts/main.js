@@ -22,11 +22,15 @@ $(function(){
 
 // Window Scroll
 $(function(){
-  $(window).on('scroll', function(){
-    if ($(this).scrollTop() > 80) {
+  $(this).on('scrollTop', function(_, data){
+    if (data.top > 80) {
       $('body').not('.scrolled').addClass('scrolled');
     } else {
       $('body.scrolled').removeClass('scrolled');
     }
+  });
+
+  $(this).on('scroll', function(){
+    $(this).trigger('scrollTop', {top: $(this).scrollTop()});
   });
 });
