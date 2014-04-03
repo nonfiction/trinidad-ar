@@ -53,3 +53,19 @@
   background-repeat: no-repeat;
   background-size: 24px 15px;
 }
+
+.mouse-link() {
+  display: block;
+  &:before {
+    display: inline-block;
+    content: ' ';
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-image: data-uri("../images/mouse.png");
+    background-position: 50% 58%;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+  }
+}

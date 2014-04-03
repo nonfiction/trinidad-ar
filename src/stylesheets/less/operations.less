@@ -31,4 +31,15 @@
   #operations-canada { .col-headings(@lime-green); }
   #operations-us { .col-headings(@cool-blue); }
   #operations-international { .col-headings(@trinidad-green); }
+
+  #operations-canada, #operations-us, #operations-international {
+    a {
+      font-weight: 900;
+      font-size: 1.05em;
+      text-transform: uppercase;
+      color: @slate-gray;
+      .mouse-link();
+    }
+  }
+
 }
