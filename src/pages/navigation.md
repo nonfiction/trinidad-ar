@@ -8,6 +8,11 @@ partial: true
 
 <ul id="navigation">
 {{#navigation}}
-  <li><a href="{{{url}}}">{{title}}</a></li>
+    <li>
+        <a href="{{{url}}}">
+            {{title}}
+            <i class="down-arrow"></i>
+        </a>
+    </li>
 {{/navigation}}
 </ul>
