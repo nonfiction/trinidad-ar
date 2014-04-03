@@ -1,10 +1,16 @@
+.pages-wrapper {
+  position: relative;
+  left: 0;
+}
+
+.pages-wrapper, nav[role=main] {
+  transition: 0.2s left;
+}
+
 nav[role=main] {
   position: fixed;
-  left: 0;
-  top: 0;
+  top: @top-bar-height;
   bottom: 0;
-  width: 110px;
-  padding: 0 10px;
   height: 100%;
   color: @wash-gray;
   font-weight: bold;
@@ -12,24 +18,97 @@ nav[role=main] {
   letter-spacing: -0.1em;
   z-index: 100;
   font-size: 0.9em;
-
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    position: absolute;
-    height: 75%;
-    top: 12.5%;
   }
-
   li {
     margin: 0;
-    height: 20%;
     a {
-      color: inherit;
-      display: block;
+      text-decoration: none;
+      color: @slate-gray;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+    }
+  }
+}
+
+.nav-toggle {
+  display: block;
+  position: absolute;
+  top: @top-bar-height;
+  right: -36px - @top-bar-height;
+  a {
+    display: block;
+    width: 36px;
+    height: 34px;
+    border-radius: 3px;
+    background-color: @trinidad-green;
+    border: 1px solid darken(@trinidad-green, 10%);
+    text-indent: -9999px;
+    background-image: data-uri('../images/hamburger.png');
+    background-size: 24px 21px;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+  }
+}
+
+// Mobile Blocking
+nav[role=main] {
+  left: -300px;
+  width: 300px;
+  background-color: lighten(@white-gray, 10%);
+  border-right: 1px solid @white-gray;
+  .nav-active & {
+    left: 0;
+    .nav-toggle {
+      right: auto;
+      left: @top-bar-height;
+    }
+  }
+  ul {
+    margin-top: 48px;
+  }
+  li {
+
+  }
+  a {
+    display: block;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid @white-gray;
+  }
+}
+
+.nav-active .pages-wrapper {
+  left: 300px;
+}
+
+// Desktop Blocking
+@media (min-width: @unwrap-width) {
+  .nav-toggle {
+    display: none;
+  }
+  nav[role=main] {
+    padding: 0 10px;
+    background-color: transparent;
+    width: 110px;
+    border: none;
+    &, &.active {
+      left: 0;
+    }
+    ul {
+      position: absolute;
+      margin-top: 0;
+      height: 75%;
+      top: 12.5%;
+    }
+    li {
+      height: 20%;
+    }
+    a {
       padding-top: 25%;
-      position: relative;
+      border-bottom: none;
       &:after {
         position: absolute;
         content: ' ';
@@ -43,5 +122,8 @@ nav[role=main] {
         .border-radius(50%);
       }
     }
+  }
+  .pages-wrapper, .nav-active .pages-wrapper {
+    left: 0;
   }
 }

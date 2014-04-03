@@ -3,8 +3,8 @@
   background-position: 10% 50%;
   .page-wrap {
     .wrap();
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 
     .page-inner {
       margin: 0 auto;
@@ -53,5 +53,12 @@
       text-transform: uppercase;
     }
 
+  }
+}
+
+@media (min-width: @unwrap-width) {
+  [id='/page/home'] {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
