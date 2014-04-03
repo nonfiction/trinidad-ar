@@ -10,7 +10,7 @@ $(function(){
 
 // Navigation
 $(function(){
-  $('.nav-active nav[role=main] li a').click(function(){
+  $('nav[role=main] li a').click(function(){
     $('body').toggleClass('nav-active');
   });
 
