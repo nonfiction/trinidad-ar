@@ -28,3 +28,15 @@
   background-position: center center;
   background-size: cover;
 }
+
+.wrap() {
+  padding-left: (@page-side-padding - 10px);
+  padding-right: 15px;
+  overflow: hidden;
+  @media (min-width: @unwrap-width) {
+    body & {
+      padding-left: @page-side-padding;
+      padding-right: @page-side-padding;
+    }
+  }
+}

@@ -10,6 +10,7 @@ nav[role=main] {
   text-transform: uppercase;
   letter-spacing: -0.1em;
   z-index: 100;
+  font-size: 0.9em;
 
   a { color: inherit; }
 
@@ -21,5 +22,11 @@ nav[role=main] {
 
   li {
     margin: 30px 0;
+  }
+}
+
+@media (min-width: @unwrap-width) {
+  nav[role=main] {
+    font-size: 1em;
   }
 }
