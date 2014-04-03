@@ -1,7 +1,8 @@
 nav[role=main] {
   position: fixed;
   left: 0;
-  top: 100px;
+  top: 0;
+  bottom: 0;
   width: 110px;
   padding: 0 10px;
   height: 100%;
@@ -12,21 +13,35 @@ nav[role=main] {
   z-index: 100;
   font-size: 0.9em;
 
-  a { color: inherit; }
-
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute;
+    height: 75%;
+    top: 12.5%;
   }
 
   li {
-    margin: 30px 0;
-  }
-}
-
-@media (min-width: @unwrap-width) {
-  nav[role=main] {
-    font-size: 1em;
+    margin: 0;
+    height: 20%;
+    a {
+      color: inherit;
+      display: block;
+      padding-top: 25%;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: ' ';
+        width: 24px;
+        height: 24px;
+        bottom: -35px;
+        left: 35%;
+        margin-left: -12px;
+        background-color: @trinidad-green;
+        border: 1px solid white;
+        .border-radius(50%);
+      }
+    }
   }
 }
