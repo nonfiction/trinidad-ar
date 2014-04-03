@@ -5,6 +5,8 @@ partial: true
 
 #### United States
 
+![Operations US]({{{staticpath}}}images/operations-us.jpg)
+
 - 58 rigs 
 - 5 barge rigs
 - 1,580 employees 
