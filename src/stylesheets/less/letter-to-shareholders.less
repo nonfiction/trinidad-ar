@@ -3,7 +3,27 @@
   .page-wrap {
     .wrap();
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
+  }
+
+  .signature {
+    display: block;
+    float: left;
+    width: 50%;
+    max-width: 270px;
+    font-weight: bold;
+    img {
+      display: block;
+      margin: 0 auto 5px 0;
+    }
+  }
+  .position {
+    font-weight: normal;
+    display: block;
+  }
+  .date {
+    clear: both;
+    padding-top: 1em;
   }
 
   aside {
@@ -19,6 +39,9 @@
     }
     p {
       font-weight: 900;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

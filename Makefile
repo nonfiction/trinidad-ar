@@ -9,7 +9,7 @@ UGLIFYFLAGS=
 ########################################
 
 src_md=$(shell find src/pages -name '*.md')
-# jslibs=$(shell find src/javascripts/*/ -name '*.js')
+jslibs=$(shell find src/javascripts/* -name '*.js')
 js=$(wildcard src/javascripts/*.js)
 less=$(wildcard src/stylesheets/*.less)
 lesslibs=$(shell find src/stylesheets/less -name '*.less')
@@ -51,7 +51,7 @@ build/images/%: src/images/%
 	mkdir -p $(@D)
 	cp $< $@
 
-build/javascripts/main.min.js: src/javascripts/main.js
+build/javascripts/main.min.js: $(jslibs) src/javascripts/main.js
 	@ mkdir -p $(@D)
 	uglifyjs $(UGLIFYFLAGS) --enclose=window:window $^ > $@
 
