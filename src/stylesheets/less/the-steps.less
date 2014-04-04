@@ -1,9 +1,7 @@
 .page[id='/page/the-steps'] {
-
   h2#the-steps {
     display: none;
   }
-
   .block {
     clear: both;
     overflow: hidden;
@@ -27,11 +25,13 @@
   .notes {
     display: block;
     width: 100%;
+    .clearfix;
   }
   .note {
     display: block;
     float: left;
     width: 50%;
+    min-width: 240px;
     font-size: 2.5em;
     .strong-heading;
     font-weight: 900;
@@ -51,6 +51,8 @@
     .sidebar {
       top: 3.5em;
       text-align: center;
+      margin-bottom: 2em;
+      .clearfix;
     }
     .note {
       width: 100%;
@@ -140,76 +142,71 @@
           top: -10px;
           font-size: 0.9em;
           line-height: 1.3em;
-          // position: absolute;
-          // background-color: white;
-          // z-index: 10;
-          // padding: 20px;
-          // box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
-          // margin-left: 48px;
-          // margin-top: 1px;
-          // margin-right: 15px;
         }
       }
 
       p.hidden {
         display: none;
       }
+    }
 
-      .steps-to-success {
-        clear: both;
-        position: relative;
-        top: 0;
-        color: #fff;
-        table {
-          margin-left: 15px;
-        }
-        td {
-          padding-top: 5px;
-          padding-bottom: 5px;
-          vertical-align: middle;
-          float: none;
-        }
-        h4 {
-          .medium-heading();
-          font-size: 2em;
-          margin-bottom: 0;
-          text-transform: none;
-          color: white;
-        }
-        .title {
-          color: white;
-          text-align: right;
-          font-weight: bold;
-          line-height: 1.4em;
-          padding-left: 30px;
-        }
-        .arrow {
-          padding: 0 12px;
-          .inner{
-            display: block;
-            width: 100%;
-            height: 14px;
-            background-image: data-uri("../images/connector.png");
-            background-repeat: no-repeat;
-            background-position: left center;
-          }
-        }
-        .description {
-          color: darken(@trinidad-green, 5%);
-        }
-        .title { width: (100% / 12) * 2.4; }
-        .arrow { width: (100% / 12) * 1.6; }
-        .description { width: (100% / 12) * 8; }
+    .steps-to-success {
+      clear: both;
+      position: relative;
+      top: 0;
+      color: #fff;
+      td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        vertical-align: middle;
+        float: none;
       }
+      h4 {
+        .medium-heading();
+        font-size: 2em;
+        margin-bottom: 0;
+        text-transform: none;
+        color: white;
+      }
+      .title {
+        color: white;
+        text-align: right;
+        font-weight: bold;
+        line-height: 1.4em;
+      }
+      .arrow {
+        padding: 0 12px;
+        .inner{
+          display: block;
+          width: 100%;
+          height: 14px;
+          background-image: data-uri("../images/connector.png");
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+      }
+      .description {
+        color: darken(@trinidad-green, 5%);
+      }
+      .title { width: (100% / 12) * 2; }
+      .arrow { width: (100% / 12) * 2; }
+      .description { width: (100% / 12) * 8; }
     }
   }
 }
 
 @media (min-width: @screen-md-min) {
   .page[id='/page/the-steps'] .block.next-steps .steps-to-success {
+    .title {
+      padding-left: 30px;
+    }
     table {
       position:relative;
       top: -4em;
+      margin-left: 15px;
     }
+    .title { width: (100% / 12) * 2.4; }
+    .arrow { width: (100% / 12) * 1.6; }
+    .description { width: (100% / 12) * 8; }
   }
 }

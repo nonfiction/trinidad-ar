@@ -16,5 +16,5 @@ id: '/page/contact-us'
 <div class="contact-col">
     Phone:     <span class="push">403.265.6525</span>
     <br>Fax:   <span class="push">403.265.4168</span>
-    <br>Email: <span class="push"><a href="{{links.contact}}">{{links.contact}}</a></span>
+    <br>Email: <span class="push"><a href="mailto:{{{links.contact}}}">{{links.contact}}</a></span>
 </div>
