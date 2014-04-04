@@ -1,9 +1,11 @@
 // Accordion - Next Steps
 $(function(){
-  $('.next-steps .main > h4').not('#summary').each(function(id, elem){
+  $('.next-steps .main > h4').each(function(id, elem){
     $(elem).next('p').toggleClass('hidden');
     $(elem).click(function(ev){
-      $(ev.currentTarget).next('p').toggleClass('hidden');
+      var target = $(ev.currentTarget).next('p');
+      $('.next-steps .main > h4').next('p').not(target).addClass('hidden');
+      target.toggleClass('hidden');
     });
   });
 });

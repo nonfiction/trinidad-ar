@@ -22,12 +22,16 @@ id: '/page/the-steps'
         {{> next_steps }}
     </div>
     <div class="steps-to-success col-md-12">
-        <h4>Steps To Success</h4>
         <table>
+            <tr class="step">
+                <td class="title"><h4>Steps To Success</h4></td>
+                <td class="arrow"></td>
+                <td class="description"></td>
+            </tr>
             {{#contents.steps_to_success.steps}}
                 <tr class="step">
                     <td class="title">{{{title}}}</td>
-                    <td class="arrow"></td>
+                    <td class="arrow"><span class="inner"></span></td>
                     <td class="description">
                         {{{description}}}
                     </td>
