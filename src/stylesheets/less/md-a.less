@@ -5,10 +5,34 @@
   padding-bottom: 30px;
   width: 100%;
   .row-shadow();
+  h3 {
+    color: @trinidad-green;
+  }
+
   .page-wrap {
     .row-wrap();
     &:after {
       display: block;
+    }
+  }
+
+  p {
+    width: 50%;
+    float: left;
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 2em 0;
+    min-width: 300px;
+    a {
+      display: block;
+      color: @wash-gray;
+      padding: 8px 0 8px 28px;
+      max-height: 33px;
+      background-repeat: no-repeat;
+      background-image: data-uri("../images/next-arrow.png");
+      background-position: left center;
     }
   }
 }
