@@ -3,6 +3,8 @@ id: letter_to_shareholders_1
 partial: true
 ---
 
+> This past year has been pivotal year in Trinidad’s strategic development; we achieved several important milestones in our long-term plan and our operations continued to perform strongly.
+
 In 2013, our operations generated adjusted EBITDA that was in line with 2012, recording higher dayrates and margins despite weaker industry activity levels. In addition, our net earnings increased to $71 million or $0.58 per share in 2013, up 29% or $0.12 per share compared to 2012. 
 
 Trinidad was successful in winning the award for one of the few liquefied natural gas related new builds given in 2013. We are currently building a rig destined for the Liard basin in northern Canada where it will be drilling wells to supply a proposed LNG plant on the coast of western Canada. Our new rig is expected to be delivered into operations later in 2014 and once completed will be one of the largest and most technically advanced drilling rigs in Canada.

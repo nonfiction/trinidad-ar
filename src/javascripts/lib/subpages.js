@@ -15,7 +15,7 @@ $(function(){
 
       // scroll back up on small screens
       if ($(window).height() < $target.height()){
-        $(window).scrollTop($target.offset().top - 30);
+        $(window).scrollTop($target.offset().top - 90);
       }
       return false;
     });
