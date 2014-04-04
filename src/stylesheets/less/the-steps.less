@@ -103,7 +103,7 @@
 
     &.next-steps {
       background-color: #A9CBE0;
-      color: @trinidad-green;
+      color: darken(@trinidad-green, 5%);
 
       .main > h4 {
         cursor: pointer;
@@ -149,6 +149,9 @@
         position: relative;
         top: 0;
         color: #fff;
+        table {
+          margin-left: 15px;
+        }
         td {
           padding-top: 5px;
           padding-bottom: 5px;
@@ -181,7 +184,7 @@
           }
         }
         .description {
-          color: @trinidad-green;
+          color: darken(@trinidad-green, 5%);
         }
         .title { width: (100% / 12) * 2.4; }
         .arrow { width: (100% / 12) * 1.6; }
@@ -191,7 +194,7 @@
   }
 }
 
-@media (min-width: @screen-sm-min) {
+@media (min-width: @screen-md-min) {
   .page[id='/page/the-steps'] .block.next-steps .steps-to-success {
     h4 {
       position:absolute;
