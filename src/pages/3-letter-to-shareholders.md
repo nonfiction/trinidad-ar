@@ -8,16 +8,22 @@ id: '/page/letter-to-shareholders'
         <div class="subpages">
             <div id="letter_to_shareholders_1" class="subpage">
                 {{>letter_to_shareholders_1}}
+                <div class="subpage-nav">
+                    <a class="next" href="#letter_to_shareholders_2">Next</a>
+                </div>
             </div>
             <div id="letter_to_shareholders_2" class="subpage">
                 {{>letter_to_shareholders_2}}
+                <div class="subpage-nav">
+                    <a class="back" href="#letter_to_shareholders_1">Back</a>
+                    <a class="next" href="#letter_to_shareholders_3">Next</a>
+                </div>
             </div>
             <div id="letter_to_shareholders_3" class="subpage">
                 {{>letter_to_shareholders_3}}
-            </div>
-            <div class="subpage-nav">
-                <a class="back" href="#back">Back</a>
-                <a class="next" href="#next">Next</a>
+                <div class="subpage-nav">
+                    <a class="back" href="#letter_to_shareholders_2">Back</a>
+                </div>
             </div>
         </div>
     </div>
