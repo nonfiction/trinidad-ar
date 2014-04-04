@@ -2,7 +2,7 @@
 ########################################
 
 LESSC=./node_modules/.bin/lessc
-LESSFLAGS=--compress --include-path=./bower_components
+LESSFLAGS=--compress --include-path=./bower_components --source-map-less-inline
 UGLIFYFLAGS=
 
 # File lists
@@ -42,7 +42,7 @@ jshint: $(js)
 
 build/stylesheets/%.css: src/stylesheets/%.less $(lesslibs)
 	@ mkdir -p $(@D)
-	$(LESSC) $(LESSFLAGS) $< > $@
+	$(LESSC) $(LESSFLAGS) --source-map=`basename $(@)`.map $< > $@
 
 build/%.ico: src/%.ico
 	cp $? $@
