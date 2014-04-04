@@ -42,7 +42,7 @@ jshint: $(js)
 
 build/stylesheets/%.css: src/stylesheets/%.less $(lesslibs)
 	@ mkdir -p $(@D)
-	$(LESSC) $(LESSFLAGS) --source-map=`basename $(@)`.map $< > $@
+	$(LESSC) $(LESSFLAGS) --source-map=$(@).map --source-map-url=`basename $(@)`.map $< > $@
 
 build/%.ico: src/%.ico
 	cp $? $@
@@ -66,9 +66,17 @@ build/javascripts/lib.min.js: $(bowerlibs)
 	@ mkdir -p $(@D)
 	uglifyjs $(UGLIFYFLAGS) $^ > $@
 
+build/javascripts/html5shiv.js: bower_components/html5shiv/dist/html5shiv.js
+	@ mkdir -p $(@D)
+	cp $^ $@
+
 # Generated Targets
 ########################################
 
 stylesheets:$(less:src/stylesheets/%.less=build/stylesheets/%.css)
-javascripts:build/javascripts/lib.min.js build/javascripts/main.min.js jshint
+javascripts: build/javascripts/lib.min.js  \
+						 build/javascripts/main.min.js \
+						 jshint                        \
+						 build/javascripts/html5shiv.js
+
 images: $(patsubst src/images/%,build/images/%,$(img_sources)) build/favicon.ico
