@@ -6,7 +6,7 @@ links:
   mda_pdf: http://www.trinidaddrilling.com
   contact: trinidad@trinidaddrilling.com
 
-staticpath: 'https://dl.dropboxusercontent.com/u/20801198/trinidad/'
+staticpath: ''
 
 navigation:
   - title: The Steps

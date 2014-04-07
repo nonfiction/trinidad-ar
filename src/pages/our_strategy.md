@@ -21,4 +21,4 @@ Selectively expand our operations to add stability, cash flow and grow future re
 
 Maintain a conservative balance sheet that supports our growth.
 
-![Our Strategy]({{{staticpath}}}/images/strategy.jpg)
+![Our Strategy]({{{staticpath}}}images/strategy.jpg)
