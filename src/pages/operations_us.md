@@ -18,5 +18,5 @@ In the US, we have equipment across the country with our most active areas in Te
 
 ---
 
-[Go To Main Operations Page]({{links.operations}})
+[Go To Main Operations Page](http://www.trinidaddrilling.com/Services.aspx)
 

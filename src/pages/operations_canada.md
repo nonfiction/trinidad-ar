@@ -17,5 +17,5 @@ In Canada, our rigs are in high demand to work in the most active plays like the
 
 ---
 
-[Go To Main Operations Page]({{links.operations}})
+[Go To Main Operations Page](http://www.trinidaddrilling.com/Services.aspx)
 

@@ -17,4 +17,4 @@ Trinidad has expanded its international operations into two countries, Mexico an
 
 ---
 
-[Go To Main Operations Page]({{links.operations}})
+[Go To Main Operations Page](http://www.trinidaddrilling.com/Services.aspx)
