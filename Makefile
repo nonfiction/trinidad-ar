@@ -15,7 +15,7 @@ less=$(wildcard src/stylesheets/*.less)
 lesslibs=$(shell find src/stylesheets/less -name '*.less')
 img_sources=$(shell find src/images -type f \! -name '.*')
 bowerlibs=bower_components/jquery/dist/jquery.js \
-					bower_components/css3-mediaqueries-js/css3-mediaqueries.js
+
 
 # General Rules
 ########################################
@@ -71,13 +71,18 @@ build/javascripts/html5shiv.js: bower_components/html5shiv/dist/html5shiv.js
 	@ mkdir -p $(@D)
 	cp $^ $@
 
+build/javascripts/css3-mediaqueries.js: bower_components/css3-mediaqueries-js/css3-mediaqueries.js
+	@ mkdir -p $(@D)
+	cp $^ $@
+
 # Generated Targets
 ########################################
 
 stylesheets:$(less:src/stylesheets/%.less=build/stylesheets/%.css)
-javascripts: build/javascripts/lib.min.js  \
-						 build/javascripts/main.min.js \
-						 jshint                        \
-						 build/javascripts/html5shiv.js
+javascripts: build/javascripts/lib.min.js   \
+						 build/javascripts/main.min.js  \
+						 jshint                         \
+						 build/javascripts/html5shiv.js \
+						 build/javascripts/css3-mediaqueries.js
 
 images: $(patsubst src/images/%,build/images/%,$(img_sources)) build/favicon.ico
