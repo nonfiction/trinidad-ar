@@ -30,7 +30,7 @@ nav[role=main] {
       text-decoration: none;
       color: #111;
       position: relative; // needed for shadow-clone
-      opacity: 0.6;
+      opacity: 0.6;       // deliberately not using .opacity since it's trash in IE
       &.active {
         opacity: 1;
       }
@@ -42,7 +42,7 @@ nav[role=main] {
   position: absolute;
   z-index: -1;
   color: white;
-  opacity: 0.55;
+  .opacity(0.55);
   left: 0;
   top: 1px;
 }

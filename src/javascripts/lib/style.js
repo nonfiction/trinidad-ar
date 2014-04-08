@@ -1,9 +1,13 @@
 $(function(){
-  $('.ops-areas a').prepend('<span class="mouse-link">');
+  $('.ops-areas a').each(function(_, elem){
+    $(elem).html('<span class="mouse-link"></span> ' + $(elem).html());
+  });
 });
 
 $(function(){
   $('nav[role=main] li a').each(function(_, elem){
-    $(elem).append($('<span class="shadow-clone">').text($(elem).text()));
+    $(elem).html(
+      $(elem).html()+'<span class="shadow-clone">'+$(elem).text()+'</span>'
+    );
   });
 });
