@@ -95,8 +95,10 @@ build/javascripts/polyfills/backgroundsize.min.htc: bower_components/background-
 
 # this requires ant and is therefore seperate from the normal build process
 src/javascripts/pie/PIE.htc:
+	@ mkdir -p $(@D)
 	cd bower_components/pie && ant
-	mv bower_components/pie/build src/javascripts/pie
+	mv bower_components/pie/build/PIE.htc src/javascripts/pie/PIE.htc
+	rm -rf bower_components/pie/build
 
 # Generated Targets
 ########################################

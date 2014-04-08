@@ -124,23 +124,19 @@
         margin: 0;
         padding: 10px 0;
         line-height: 0.8em;
-        &:before {
+        i.right-arrow {
           display: inline-block;
-          content: ' ';
-          background-color: @trinidad-green;
+          width: 38px;
+          height: 38px;
           background-image: data-uri('../images/right-arrow.png');
-          background-position: 85% 50%;
           background-repeat: no-repeat;
           vertical-align: middle;
           margin-bottom: 8px;
-          width: 38px;
-          height: 38px;
-          margin-right: 12px;
-          border: 2px solid white;
-          .border-radius(50%);
-          .ie-pie;
+          margin-right: 5px;
+          .background-size(contain);
+          .ie-background-size;
         }
-        &#canadian-lng {
+        &.no-border {
           border-top: none;
         }
         + p {
