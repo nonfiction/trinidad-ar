@@ -39,10 +39,11 @@ nav[role=main] {
 }
 
 .shadow-clone {
+  display: none;       // only shown in desktop
   position: absolute;
   z-index: -1;
   color: white;
-  .opacity(0.55);
+  .opacity(0.6);
   left: 0;
   top: 1px;
 }
@@ -106,6 +107,9 @@ nav[role=main] {
 
 // Desktop Blocking
 @media (min-width: @unwrap-width) {
+  .shadow-clone {
+    display: inline;
+  }
   .nav-toggle {
     display: none;
   }
