@@ -10,6 +10,12 @@ $(function(){
   });
 });
 
+$(function(){
+  $('nav[role=main] li a').each(function(_, elem){
+    $(elem).append($('<span class="shadow-clone">').text($(elem).text()));
+  });
+});
+
 // Navigation
 $(function(){
   $('nav[role=main] li a').click(function(){

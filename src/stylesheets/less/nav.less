@@ -29,13 +29,22 @@ nav[role=main] {
     a {
       text-decoration: none;
       color: #111;
-      text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+      position: relative; // needed for shadow-clone
       opacity: 0.6;
       &.active {
         opacity: 1;
       }
     }
   }
+}
+
+.shadow-clone {
+  position: absolute;
+  z-index: -1;
+  color: white;
+  opacity: 0.55;
+  left: 0;
+  top: 1px;
 }
 
 .nav-toggle {
