@@ -24,7 +24,10 @@ bower_head=bower_components/modernizr/modernizr.js 										 \
 
 # list of files to copy directly
 bower_cp=bower_components/html5shiv/dist/html5shiv.js  \
-				 bower_components/respond/src/respond.js
+				 bower_components/respond/src/respond.js       \
+				 bower_components/background-size-polyfill/backgroundsize.min.htc  \
+
+
 
 # General Rules
 ########################################
@@ -84,6 +87,19 @@ build/javascripts/head.min.js: $(bower_head)
 	@ mkdir -p $(@D)
 	uglifyjs $(UGLIFYFLAGS) $^ > $@
 
+build/javascripts/polyfills/PIE.htc: src/javascripts/pie/PIE.htc
+	@ mkdir -p $(@D)
+	@ cp $? $@
+
+build/javascripts/polyfills/backgroundsize.min.htc: bower_components/background-size-polyfill/backgroundsize.min.htc
+	@ mkdir -p $(@D)
+	@ cp $? $@
+
+# this requires ant and is therefore seperate from the normal build process
+src/javascripts/pie/PIE.htc:
+	cd bower_components/pie && ant
+	mv bower_components/pie/build src/javascripts/pie
+
 # Generated Targets
 ########################################
 
@@ -92,6 +108,8 @@ javascripts: build/javascripts/lib.min.js   \
 						 build/javascripts/head.min.js   \
 						 build/javascripts/main.min.js  \
 						 jshint                         \
-						 $(bower_cp:bower_components/%.js=build/javascripts/components/%.js)
+						 $(bower_cp:bower_components/%.js=build/javascripts/components/%.js) \
+						 build/javascripts/polyfills/PIE.htc  \
+						 build/javascripts/polyfills/backgroundsize.min.htc
 
 images: $(patsubst src/images/%,build/images/%,$(img_sources)) build/favicon.ico

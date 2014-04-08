@@ -8,6 +8,8 @@
     "html5shiv": "~3.7.0",
     "css3-mediaqueries-js": "*",
     "modernizr": "~2.7.2",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "background-size-polyfill": "~0.2.0",
+    "pie": "~1.0.0"
   }
 }

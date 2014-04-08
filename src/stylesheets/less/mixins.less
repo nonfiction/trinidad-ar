@@ -22,11 +22,22 @@
   }
 }
 
+.ie-background-size(){
+  /* The url is relative to the document, not to the css file! */
+  /* Prefer absolute urls to avoid confusion. */
+  -ms-behavior: url("javascripts/polyfills/backgroundsize.min.htc");
+}
+
+.ie-pie(){
+  behavior: url('javascripts/polyfills/PIE.htc');
+}
+
 .background-cover(@image, @color) {
   background-color: @color;
   background-image: url(@image);
   background-position: center center;
-  background-size: cover;
+  .background-size(cover);
+  .ie-background-size;
 }
 
 .wrap() {
@@ -48,10 +59,12 @@
   background-color: @trinidad-green;
   border: 2px solid mix(black, white, 5%);
   .border-radius(50%);
+  .ie-pie;
   background-image: data-uri("../images/down-arrow.png");
   background-position: 50% 58%;
   background-repeat: no-repeat;
-  background-size: 24px 15px;
+  .background-size(24px 15px);
+  .ie-background-size;
 }
 
 .mouse-link() {
@@ -66,6 +79,7 @@
     background-image: data-uri("../images/mouse.png");
     background-position: 50% 58%;
     background-repeat: no-repeat;
-    background-size: 32px 32px;
+    .background-size(32px 32px);
+    .ie-background-size;
   }
 }
