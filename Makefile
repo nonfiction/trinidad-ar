@@ -24,9 +24,7 @@ bower_head=bower_components/modernizr/modernizr.js 										 \
 
 # list of files to copy directly
 bower_cp=bower_components/html5shiv/dist/html5shiv.js  \
-				 bower_components/respond/src/respond.js       \
-				 bower_components/background-size-polyfill/backgroundsize.min.htc  \
-
+				 bower_components/respond/src/respond.js
 
 
 # General Rules
