@@ -3,6 +3,7 @@
 
 LESSC=./node_modules/.bin/lessc
 LESSFLAGS=--compress --include-path=./bower_components --source-map-less-inline
+UGLIFYJS=./node_modules/uglify-js/bin/uglifyjs
 UGLIFYFLAGS=
 
 # File lists
@@ -75,15 +76,15 @@ build/index.html: src/layout.mustache src/site.yml $(src_md)
 
 build/javascripts/main.min.js: $(jslibs) src/javascripts/main.js
 	@ mkdir -p $(@D)
-	uglifyjs $(UGLIFYFLAGS) --enclose=window:window $^ > $@
+	$(UGLIFYJS) $(UGLIFYFLAGS) --enclose=window:window $^ > $@
 
 build/javascripts/lib.min.js: $(bower_libs)
 	@ mkdir -p $(@D)
-	uglifyjs $(UGLIFYFLAGS) $^ > $@
+	$(UGLIFYJS) $(UGLIFYFLAGS) $^ > $@
 
 build/javascripts/head.min.js: $(bower_head)
 	@ mkdir -p $(@D)
-	uglifyjs $(UGLIFYFLAGS) $^ > $@
+	$(UGLIFYJS) $(UGLIFYFLAGS) $^ > $@
 
 build/javascripts/polyfills/PIE.htc: src/javascripts/pie/PIE.htc
 	@ mkdir -p $(@D)

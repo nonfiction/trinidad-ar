@@ -1,6 +1,5 @@
 {
   "name": "trinidad-ar",
-  "preferGlobal":true,
   "devDependencies": {
     "js-yaml": "^3.0.2",
     "mustache": "^0.8.1",
