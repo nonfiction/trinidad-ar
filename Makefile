@@ -64,7 +64,7 @@ build/%.ico: src/%.ico
 
 build/images/%: src/images/%
 	mkdir -p $(@D)
-	cp $< $@
+	cp -R src/images/* build/images/
 
 # Single File Rules
 ########################################
