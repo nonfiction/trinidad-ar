@@ -6,16 +6,13 @@ $(function(){
       var target = $(ev.currentTarget).next('p');
       $('.next-steps .main > h4').next('p').not(target).addClass('hidden');
       target.toggleClass('hidden');
-      setTimeout(function(){
+      var random_position = function(){
         var random_50_percent = function(){
           return '5' + parseInt(Math.random() * 10)-5 + '%';
         };
-        $(".page[id='/page/the-steps'] .next-steps").css(
-          {
-            'background-position': random_50_percent + ' ' + random_50_percent
-          }
-        );
-      }, 2000);
+        $(".next-steps").css('background-position', random_50_percent() + ' ' + random_50_percent());
+      };
+      setTimeout(random_position, 300);
     });
   });
 });
