@@ -29,3 +29,5 @@ In the US, we have seen an ongoing switch away from mechanical style drilling eq
 </h4>
 
 Perhaps our most exciting growth opportunity is our international expansion. Our joint venture with Halliburton Company (Halliburton) gives us an opportunity to add rigs to a broad range of countries in a timeframe we could never have managed alone. Halliburton currently operates more than 100 rigs in more than 20 countries and expects to run a significant number of these rigs through our joint venture in the coming years. So far we have added eight rigs to the joint venture in two countries - Mexico and Saudi Arabia; but this is just the first step in our future global growth.
+
+<div class="top-border">&nbsp;</div>

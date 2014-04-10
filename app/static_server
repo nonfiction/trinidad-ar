@@ -1,0 +1,17 @@
+#!/bin/bash
+
+DIRECTORY=`pwd`
+cd `dirname $0`
+
+# Serve the current directory with nginx on port 8080
+CONF_FILE=/tmp/nginx.conf
+PORT=8080
+
+cat nginx-dev.conf | sed -e s:__PORT__:$PORT: -e s:__DIRECTORY__:"$DIRECTORY": > $CONF_FILE
+
+cd $DIRECTORY
+
+echo nginx configuration written to $CONF_FILE
+echo nginx serving at http://localhost:$PORT
+
+nginx -c $CONF_FILE

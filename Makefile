@@ -40,7 +40,7 @@ watch:
 	fswatch src:app 'clear; make;'
 
 serve:
-	@ cd build && ../app/static_server.js
+	@ cd build && ../app/static_server
 
 site: build/index.html assets
 
