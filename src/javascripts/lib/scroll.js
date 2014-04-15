@@ -1,17 +1,3 @@
-// Add .scrolled class once the window has scrolled
-// `scroll_limit` pixels
-$(function(){
-  var scroll_limit = 80;
-
-  $(this).on('scroll-top', function(_, top){
-    if (top > scroll_limit) {
-      $('body').not('.scrolled').addClass('scrolled');
-    } else {
-      $('body.scrolled').removeClass('scrolled');
-    }
-  });
-});
-
 // Add active class when a section is navigated to
 $(function(){
   $(this).on('nav-section', function(ev, section){
@@ -47,5 +33,18 @@ $(function(){
       current_section = select_section;
       $(this).trigger('nav-section', current_section);
     }
+  });
+});
+
+// Override scroll handler to activate the right nav item on a direct click
+// since the bottom two sections may never activate on scroll
+$(function(){
+  $('[href^="#/page"]').click(function(ev){
+    var $page_to_activate = $(ev.currentTarget);
+    function setActiveNav(){
+      $('#navigation a').removeClass('active');
+      $page_to_activate.addClass('active');
+    }
+    setTimeout(setActiveNav, 50);
   });
 });
