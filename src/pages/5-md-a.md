@@ -8,6 +8,6 @@ id: '/page/md-a'
 
 [Download Full Annual Report In PDF Form]({{{links.ar_pdf}}})
 
-[Download Financial Statement In PDF Form]({{{links.fs_pdf}}})
+[Download Financial Statements In PDF Form]({{{links.fs_pdf}}})
 
 [Download MD&A In PDF Form]({{{links.mda_pdf}}})

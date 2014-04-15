@@ -7,7 +7,7 @@ partial: true
 
 ![Operations International]({{{staticpath}}}images/operations-international.jpg)
 
-- 11 rigs (1,2)
+- 11 rigs <sup>(1,2)</sup>
 - 25 employees 
 - 100% high-performance rigs
 

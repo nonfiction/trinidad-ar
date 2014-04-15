@@ -7,7 +7,7 @@ partial: true
 
 ![Operations Canada]({{{staticpath}}}images/operations-canada.jpg)
 
-- 62 rigs (1) 
+- 62 rigs <sup>(1)</sup>
 - 1,250 employees 
 - 75% high-performance rigs
 
