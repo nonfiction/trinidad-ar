@@ -79,6 +79,7 @@
   .step-3 { .step-color(@mute-green); }
   .next-steps {
     .background-cover(~"@{staticpath}images/next-steps.jpg", #edf0ff);
+    background-position: 0% 50%; // see JS behaviour
     .step-color(@trinidad-green);
   }
 
@@ -219,5 +220,10 @@
     .title { width: (100% / 12) * 2.4; }
     .arrow { width: (100% / 12) * 1.6; }
     .description { width: (100% / 12) * 8; }
+  }
+}
+@media (max-width: @screen-md-min) {
+  .page[id='/page/the-steps'] .next-steps {
+    background-position: right center !important; // bg simply doesn't work on mobile
   }
 }

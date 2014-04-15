@@ -1,20 +1,34 @@
 // Accordion - Next Steps
 $(function(){
+
+  // Slightly randomize the background-position for IE to force a refresh
+  function randomizeNextSteps(){
+    var background_position = [0, 50];
+    var random_percent = function(){
+      return parseInt(Math.random() * 5);
+    };
+    $(".next-steps").css(
+      'background-position',
+      (background_position[0] + random_percent()) +
+      '% ' +
+      (background_position[1] + random_percent()) +
+      '%'
+    );
+  }
+
+  // Handle clicks of h4's in next-steps
   $('.next-steps .main > h4').each(function(id, elem){
     $(elem).next('p').toggleClass('hidden');
     $(elem).click(function(ev){
       var target = $(ev.currentTarget).next('p');
       $('.next-steps .main > h4').next('p').not(target).addClass('hidden');
       target.toggleClass('hidden');
-      var random_position = function(){
-        var random_50_percent = function(){
-          return '5' + parseInt(Math.random() * 10)-5 + '%';
-        };
-        $(".next-steps").css('background-position', random_50_percent() + ' ' + random_50_percent());
-      };
-      setTimeout(random_position, 300);
+      setTimeout(randomizeNextSteps, 300);
     });
   });
+
+  // run randomize to avoid large jumps on first click
+  randomizeNextSteps();
 });
 
 // Navigation
